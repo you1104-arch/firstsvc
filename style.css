@@ -1,10 +1,8 @@
-/* ===== Clean & Minimal School UI ===== */
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
 }
 
 body {
@@ -16,17 +14,15 @@ body {
   color: #111827;
 }
 
-/* 메인 카드 */
 .container {
   width: 100%;
   max-width: 360px;
   background: #ffffff;
-  padding: 32px 28px 36px;
-  border-radius: 12px;
   border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 32px 28px;
 }
 
-/* 제목 */
 h1 {
   font-size: 18px;
   font-weight: 600;
@@ -34,15 +30,13 @@ h1 {
   margin-bottom: 28px;
 }
 
-/* 입력 영역 */
-form > div {
+.field {
   margin-bottom: 18px;
 }
 
 label {
   display: block;
   font-size: 13px;
-  font-weight: 500;
   margin-bottom: 6px;
   color: #374151;
 }
@@ -51,9 +45,9 @@ input {
   width: 100%;
   height: 42px;
   padding: 0 12px;
-  font-size: 14px;
-  border-radius: 6px;
   border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 input:focus {
@@ -61,7 +55,6 @@ input:focus {
   border-color: #2563eb;
 }
 
-/* 버튼 */
 button {
   width: 100%;
   height: 44px;
@@ -71,7 +64,6 @@ button {
   border: none;
   border-radius: 6px;
   font-size: 14px;
-  font-weight: 500;
   cursor: pointer;
 }
 
@@ -79,30 +71,34 @@ button:hover {
   background: #1d4ed8;
 }
 
-/* 결과 영역 */
-#result {
+.result {
   margin-top: 24px;
   padding-top: 16px;
   border-top: 1px solid #e5e7eb;
 }
 
-#result h2 {
+.result h2 {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-#result p {
+.result p {
+  display: flex;
+  justify-content: space-between;
   font-size: 13px;
   margin-bottom: 6px;
 }
 
-#result span {
+.result span {
+  color: #6b7280;
+}
+
+.result strong {
   font-weight: 600;
 }
 
-/* 에러 메시지 */
-#errorMessage {
+.error {
   margin-top: 16px;
   text-align: center;
   font-size: 13px;

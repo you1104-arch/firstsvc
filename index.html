@@ -3,42 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>우리학교 구글 계정 검색</title>
+  <title>서원고등학교 구글 계정 검색</title>
 
-  <!-- CSS 연결 -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>우리학교 구글 계정 검색</h1>
+    <h1>서원고등학교 구글 계정 검색</h1>
 
-    <!-- 검색 입력 영역 -->
     <form id="searchForm">
-      <div>
+      <div class="field">
         <label for="studentId">학번</label>
-        <input type="text" id="studentId" name="studentId" placeholder="예: 30101" required />
+        <input type="text" id="studentId" placeholder="예: 30101" required />
       </div>
 
-      <div>
+      <div class="field">
         <label for="studentName">이름</label>
-        <input type="text" id="studentName" name="studentName" placeholder="예: 홍길동" required />
+        <input type="text" id="studentName" placeholder="예: 홍길동" required />
       </div>
 
       <button type="submit">검색</button>
     </form>
 
-    <!-- 결과 출력 영역 -->
-    <section id="result" style="display:none;">
+    <section id="result" class="result" style="display: none;">
       <h2>검색 결과</h2>
-      <p><strong>구글 계정 ID:</strong> <span id="resultId"></span></p>
-      <p><strong>구글 계정 PW:</strong> <span id="resultPw"></span></p>
+      <p><span>구글 계정 ID</span><strong id="resultId"></strong></p>
+      <p><span>초기 비밀번호</span><strong id="resultPw"></strong></p>
     </section>
 
-    <!-- 에러 메시지 영역 -->
-    <p id="errorMessage" style="display:none;"></p>
+    <p id="errorMessage" class="error" style="display: none;"></p>
   </div>
 
-  <!-- JavaScript 연결 -->
   <script src="script.js"></script>
 </body>
 </html>
