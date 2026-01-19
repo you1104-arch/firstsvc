@@ -105,3 +105,28 @@ button:hover {
   color: #dc2626;
 }
 
+/* 하단 환영 문구 (오른쪽 → 왼쪽) */
+.marquee {
+  margin-top: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+}
+
+.marquee p {
+  display: inline-block;
+  font-size: 12px;
+  color: #6b7280;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
