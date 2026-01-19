@@ -105,14 +105,3 @@ button:hover {
   color: #dc2626;
 }
 
-/* 로고 영역 */
-.logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 14px;
-}
-
-.logo img {
-  height: 48px;          /* 로고 크기 (조절 가능) */
-  object-fit: contain;
-}
