@@ -1,4 +1,3 @@
-// 예시 계정 데이터
 const accounts = [
   {
     studentId: "30101",
@@ -17,13 +16,14 @@ const accounts = [
 const form = document.getElementById("searchForm");
 const studentIdInput = document.getElementById("studentId");
 const studentNameInput = document.getElementById("studentName");
+const resetBtn = document.getElementById("resetBtn");
 
 const resultBox = document.getElementById("result");
 const resultId = document.getElementById("resultId");
 const resultPw = document.getElementById("resultPw");
 const errorMessage = document.getElementById("errorMessage");
 
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", e => {
   e.preventDefault();
 
   const studentId = studentIdInput.value.trim();
@@ -33,7 +33,7 @@ form.addEventListener("submit", function (e) {
   errorMessage.style.display = "none";
 
   if (!studentId && !studentName) {
-    errorMessage.textContent = "학번 또는 이름 중 하나를 입력하세요.";
+    errorMessage.textContent = "학번 또는 이름을 입력하세요.";
     errorMessage.style.display = "block";
     return;
   }
@@ -44,4 +44,18 @@ form.addEventListener("submit", function (e) {
   );
 
   if (account) {
-    resultId.textContent = a
+    resultId.textContent = account.googleId;
+    resultPw.textContent = account.googlePw;
+    resultBox.style.display = "block";
+  } else {
+    errorMessage.textContent = "일치하는 계정 정보를 찾을 수 없습니다.";
+    errorMessage.style.display = "block";
+  }
+});
+
+resetBtn.addEventListener("click", () => {
+  studentIdInput.value = "";
+  studentNameInput.value = "";
+  resultBox.style.display = "none";
+  errorMessage.style.display = "none";
+});
