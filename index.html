@@ -9,6 +9,12 @@
 </head>
 <body>
   <div class="container">
+
+    <!-- 로고 영역 -->
+    <div class="logo">
+      <img src="logo.png" alt="서원고등학교 로고">
+    </div>
+
     <h1>서원고등학교 구글 계정 검색</h1>
 
     <form id="searchForm">
@@ -25,13 +31,13 @@
       <button type="submit">검색</button>
     </form>
 
-    <section id="result" class="result" style="display: none;">
+    <section id="result" style="display:none;">
       <h2>검색 결과</h2>
-      <p><span>구글 계정 ID</span><strong id="resultId"></strong></p>
-      <p><span>초기 비밀번호</span><strong id="resultPw"></strong></p>
+      <p><strong>구글 계정 ID:</strong> <span id="resultId"></span></p>
+      <p><strong>초기 비밀번호:</strong> <span id="resultPw"></span></p>
     </section>
 
-    <p id="errorMessage" class="error" style="display: none;"></p>
+    <p id="errorMessage" style="display:none;"></p>
   </div>
 
   <script src="script.js"></script>
