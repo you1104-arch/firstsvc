@@ -32,16 +32,16 @@ form.addEventListener("submit", function (e) {
   resultBox.style.display = "none";
   errorMessage.style.display = "none";
 
-  const account = accounts.find(
-    acc => acc.studentId === studentId && acc.name === studentName
+  if (!studentId && !studentName) {
+    errorMessage.textContent = "학번 또는 이름 중 하나를 입력하세요.";
+    errorMessage.style.display = "block";
+    return;
+  }
+
+  const account = accounts.find(acc =>
+    (studentId && acc.studentId === studentId) ||
+    (studentName && acc.name === studentName)
   );
 
   if (account) {
-    resultId.textContent = account.googleId;
-    resultPw.textContent = account.googlePw;
-    resultBox.style.display = "block";
-  } else {
-    errorMessage.textContent = "일치하는 계정 정보를 찾을 수 없습니다.";
-    errorMessage.style.display = "block";
-  }
-});
+    resultId.textContent = a
