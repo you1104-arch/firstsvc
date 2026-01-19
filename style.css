@@ -1,111 +1,99 @@
-/* 전체 리셋 및 기본 설정 */
+/* ===== Clean & Minimal School UI ===== */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(180deg, #f8fafc, #eef2f7);
+  background: #f3f4f6;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #1f2937;
+  color: #111827;
 }
 
-/* 카드형 레이아웃 */
+/* 메인 카드 */
 .container {
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
   background: #ffffff;
-  padding: 36px 32px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px 36px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
 }
 
+/* 제목 */
 h1 {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 28px;
-  letter-spacing: -0.3px;
 }
 
-/* 입력 그룹 */
+/* 입력 영역 */
 form > div {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 label {
   display: block;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 6px;
   color: #374151;
 }
 
 input {
   width: 100%;
-  height: 44px;
-  padding: 0 14px;
+  height: 42px;
+  padding: 0 12px;
   font-size: 14px;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: #f9fafb;
-  transition: all 0.2s ease;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
 }
 
 input:focus {
   outline: none;
-  background: #ffffff;
   border-color: #2563eb;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
 /* 버튼 */
 button {
   width: 100%;
-  height: 46px;
-  margin-top: 8px;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  height: 44px;
+  margin-top: 10px;
+  background: #2563eb;
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
-}
-
-button:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+  background: #1d4ed8;
 }
 
 /* 결과 영역 */
 #result {
-  margin-top: 26px;
-  padding: 18px;
-  border-radius: 12px;
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
 }
 
 #result h2 {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 #result p {
-  font-size: 14px;
+  font-size: 13px;
   margin-bottom: 6px;
 }
 
@@ -115,9 +103,8 @@ button:active {
 
 /* 에러 메시지 */
 #errorMessage {
-  margin-top: 18px;
+  margin-top: 16px;
   text-align: center;
   font-size: 13px;
-  font-weight: 500;
   color: #dc2626;
 }
