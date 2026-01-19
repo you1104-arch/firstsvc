@@ -130,3 +130,128 @@ button:hover {
     transform: translateX(-100%);
   }
 }
+* {
+  box-sizing: border-box;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+}
+
+/* 전체 컨테이너 */
+.container {
+  max-width: 420px;
+  margin: 80px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* 로고 */
+.logo img {
+  width: 80px;
+  margin-bottom: 12px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo h1 {
+  margin: 8px 0 4px;
+}
+
+.logo p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 검색 박스 */
+.search-box {
+  margin-top: 24px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* 버튼 그룹 */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* 검색 버튼 */
+.search-btn {
+  background: #2b6cff;
+  color: white;
+}
+
+.search-btn:hover {
+  background: #1f56d6;
+}
+
+/* 초기화 버튼 */
+.reset-btn {
+  background: #e5e7eb;
+  color: #333;
+}
+
+.reset-btn:hover {
+  background: #d1d5db;
+}
+
+/* 결과 박스 */
+.result-box {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  min-height: 48px;
+}
+
+/* 하단 환영 문구 */
+.marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #2b6cff;
+  color: white;
+  overflow: hidden;
+  height: 40px;
+}
+
+.marquee p {
+  line-height: 40px;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+
+/* 애니메이션 */
+@keyframes marquee {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
